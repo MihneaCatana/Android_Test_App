@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdaugaMasina">
+
+    <EditText
+        android:id="@+id/MarcaTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="Marca"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <EditText
+        android:id="@+id/AnTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="An"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecteaza Data" />
+
+    <TextView
+        android:id="@+id/tbData"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/labelTipMasina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Masina" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonElectrica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ELECTRICA" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDiesel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIESEL" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBenzina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BENZINA" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Submit" />
+
+</LinearLayout>
+</ScrollView>
