@@ -28,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
 
     final int CODE = 200;
 
+    /*
+    *
+    *  1. ListView si FloatingActionButton pe Main
+    *  2. Layout pentru pagina de inscriere
+    *  3. Apelam pagina de inscriere prin intermediul unui Intent  ( punem un cod pentru a returna date )
+    *  4. Salvam datele intr-un obiect (facem validari)
+    *  5. Obiectul il trimitem inapoi in Main prin intermediul intent-ului  ( putExtra + setResult + finish)
+    *  6. In main ne folosim de ListView, lista si ArrayAdapter
+    *  7. Daca savedInstanceState != null, preluam din listKey
+    *  8. onActivityResult verificam daca se potriveste result + request -> preluam din intent si adaugam in lista + adaptor.notifyDataChanged
+    *  9. Generate onSaveInstanceState (salvam lista serializata in listkey
+    *
+    *
+    * */
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,11 +90,6 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         outState.putSerializable("listkey",(Serializable) listMasini);
-    }
-
-    @Override
-    public void onRestoreInstanceState(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onRestoreInstanceState(savedInstanceState, persistentState);
     }
 
     @NonNull
